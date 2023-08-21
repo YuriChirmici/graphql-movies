@@ -1,7 +1,10 @@
 const express = require("express");
+const { graphqlMiddleware } = require("./graphql");
 
 const app = express();
 const PORT = process.env.PORT || 3005;
+
+app.use("/graphql", graphqlMiddleware());
 
 const start = async () => {
 	try {
