@@ -8,7 +8,7 @@ const uri = `mongodb+srv://${user}:${password}@` +
 
 module.exports = {
 	async connect() {
-		await connect(uri);
+		await connect(uri, { useNewUrlParser: true });
 		console.log("DB connected!");
 	}
 }
